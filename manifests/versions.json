@@ -1,0 +1,10 @@
+{
+  "runtime_strategy": "pennyroyal-first",
+  "hyperburst_base_commit": "16e5682aad",
+  "baseline_kv": "fp8_e4m3",
+  "experimental_kv": "nvfp4_qsa",
+  "overlay_default": false,
+  "oea_default": false,
+  "megakernel_default": false,
+  "notes": "Replace placeholder runtime SHAs in Phase 00 with verified commits before build."
+}
