@@ -19,6 +19,12 @@ Quelle: https://github.com/jpezzulli/sglang-rtxpro6000
 - gemeldete native NEXTN/FR-Spec-Profile und automatisch aufgelöster gemeinsamer KV-Pool.
 - aktuelle Runtime ist der Correctness-Anker für Mamba/GDN, Cache und Recovery.
 
+## Verified repository heads and patch provenance
+
+- Pennyroyal default branch: `pennyroyal-main-sm120-final`; verified head `202f266be2d46453e098792fa39057e859fb8095` (2026-11-06, published 3.1.6 records).
+- Hyperburst current head: `8ff73f41696828b184ff21abbce02e03809947d3`; documented patch-series base: `16e5682aad`.
+- Lesilva current head: `f26bceff5b7b305669467a83536ff7c54c2e40f3`; production 3.1.5 overlay commit: `215fe89e0feee9a5b3a988df8f97affb0ee87168`.
+
 ## Lesilva NVFP4-KV
 
 Quelle: https://github.com/Lesilva/qwen38-flashnext-nvfp4-kv
