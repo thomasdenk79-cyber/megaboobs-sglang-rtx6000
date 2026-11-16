@@ -1,24 +1,19 @@
 # AGENTS.md
 
-## Auftrag
-
-Arbeite den Master-Auftrag unter `tasks/MASTER-AUFTRAG-VARIANTE-B.md` vollständig ab. Du bist für Recherche, Architektur, Implementierung, Tests und Dokumentation verantwortlich.
+Du bist der Implementer. Die Architekturentscheidungen in den Dokumenten sind verbindliche Vorgaben. Lies zuerst `00_START_HERE.md`, dann die aktuelle Phase und den zugehörigen Prompt.
 
 ## Regeln
 
-- Zuerst die echten Repositories, Branches, Tags, Commits, Issues und Quellcode-Schnittstellen prüfen.
-- Keine unbestätigten Behauptungen als Fakten verwenden.
-- Keine Gewichte in Git committen und keine Original-Checkpoints überschreiben.
-- Keine Modell- oder KV-Hybridisierung ohne Tensor-, Quantisierungs- und Qualitätsvalidierung.
-- NVIDIA FP4-Local bleibt die Referenz; bei einem Hybrid-Blocker bleibt die unveränderte NVIDIA-Basis lauffähig.
-- Keine produktive Installation oder Hardwareänderung ohne explizite, reproduzierbare Abnahme.
-- Jede Phase braucht Tests, Messprotokoll, Definition of Done, Rollback-Bedingung und Commit.
-- Architekturänderungen werden in ADRs begründet; bei Unsicherheit STOP und eskalieren.
+- Pennyroyal ist die Basis; Hyperburst wird nur selektiv und mit Semantikvergleich übernommen.
+- NVIDIA FP4-Local bleibt die unveränderte Referenz.
+- ThinkingCap-Overlay nur bei exakter Tensor-/Shape-/Dtype-/Scale-Kompatibilität.
+- FP8-KV ist der Referenzpfad; NVFP4-KV bleibt hinter einem Feature-Flag.
+- NVFP4-HiCache über den Kernel-Pfad ist bis zur Behebung von Issue #43239 gesperrt.
+- Kein OEA, kein Megakernel und keine privaten MTP-Artefakte in den ersten Correctness-Phasen.
+- Keine Gewichte, Keys oder proprietären Dateien in Git.
+- Jede Phase endet mit Tests, Messprotokoll, Definition of Done und Commit.
+- Bei Mismatch, Korruption, OOM oder fehlender Evidenz: STOP, Baseline erhalten, Blocker dokumentieren.
 
-## Arbeitsweise
+## Commit-Regel
 
-1. Quellen und aktuelle Baselines erfassen.
-2. Architekturentscheidung mit Evidenz dokumentieren.
-3. Kleine Phasen mit überprüfbaren Zwischenständen umsetzen.
-4. Nach jedem Commit `git status`, relevante Tests und geänderte Dateien protokollieren.
-5. Bei Fehlern zuerst reproduzieren, dann Ursache und minimale Korrektur dokumentieren.
+Ein Commit behandelt genau eine Phase oder einen atomaren Patch. Commit-Nachricht, geänderte Dateien, Testbefehle, Messwerte und Rückfallpfad in `docs/` dokumentieren.
