@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-11-16",
+  "sources": [
+    {"name":"hyperburst","url":"https://github.com/aiueo52/hyperburst-rtxpro6000","role":"performance patches"},
+    {"name":"pennyroyal","url":"https://github.com/jpezzulli/sglang-rtxpro6000","role":"runtime baseline"},
+    {"name":"lesilva_nvfp4_kv","url":"https://github.com/Lesilva/qwen38-flashnext-nvfp4-kv","role":"optional KV backend"},
+    {"name":"nvidia_model","url":"https://huggingface.co/nvidia/Qwen3.8-Flash-Next-FP4-Local","role":"reference checkpoint"},
+    {"name":"thinkingcap","url":"https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.8-Flash-Next-NVFP4","role":"overlay candidate"},
+    {"name":"sglang_issue_43239","url":"https://github.com/sgl-project/sglang/issues/43239","role":"NVFP4 HiCache blocker"},
+    {"name":"sglang_issue_42369","url":"https://github.com/sgl-project/sglang/issues/42369","role":"scale compatibility blocker"},
+    {"name":"sglang_issue_45030","url":"https://github.com/sgl-project/sglang/issues/45030","role":"stream restore requirement"}
+  ]
+}
