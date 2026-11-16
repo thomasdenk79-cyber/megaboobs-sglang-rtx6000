@@ -1,0 +1,15 @@
+sequenceDiagram
+  participant S as Scheduler
+  participant H as HiCache
+  participant D as NIXL/SSD
+  participant G as GPU KV
+  S->>H: request prefix restore
+  H->>H: validate manifest and ABI
+  loop page-aligned chunks
+    H->>D: async read data + scales
+    D-->>H: chunk
+    H->>G: materialize chunk
+    G-->>H: checksum/ownership ack
+  end
+  H->>G: attach Mamba/GDN/MTP endpoint state
+  H-->>S: hit only after full validation
