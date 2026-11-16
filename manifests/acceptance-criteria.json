@@ -1,0 +1,13 @@
+{
+  "hard_gates": [
+    "baseline_api_and_tool_correctness",
+    "tensor_and_scale_manifest_validation",
+    "nvfp4_eager_round_trip",
+    "target_and_draft_state_restore",
+    "streamed_350k_and_500k_restore_with_4_to_8_gib_buffer",
+    "crash_recovery_without_silent_hit",
+    "overlay_ab_quality_non_regression"
+  ],
+  "fallback": "nvidia_reference_fp8_kv",
+  "no_go_conditions": ["unknown_tensor", "scale_scheme_mismatch", "partial_restore_marked_hit", "unbounded_host_ram"]
+}
