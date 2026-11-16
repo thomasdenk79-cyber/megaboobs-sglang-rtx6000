@@ -1,10 +1,15 @@
 {
   "runtime_strategy": "pennyroyal-first",
-  "hyperburst_base_commit": "16e5682aad",
+  "pennyroyal_default_branch": "pennyroyal-main-sm120-final",
+  "pennyroyal_verified_head_2026_11_06": "202f266be2d46453e098792fa39057e859fb8095",
+  "hyperburst_current_head_2026_11_12": "8ff73f41696828b184ff21abbce02e03809947d3",
+  "hyperburst_documented_base_for_patch_series": "16e5682aad",
+  "lesilva_current_head_2026_11_15": "f26bceff5b7b305669467a83536ff7c54c2e40f3",
+  "lesilva_production_3_1_5_overlay_commit": "215fe89e0feee9a5b3a988df8f97affb0ee87168",
   "baseline_kv": "fp8_e4m3",
   "experimental_kv": "nvfp4_qsa",
   "overlay_default": false,
   "oea_default": false,
   "megakernel_default": false,
-  "notes": "Replace placeholder runtime SHAs in Phase 00 with verified commits before build."
+  "notes": "Verify the exact runtime image digest and model revision on the target host before production."
 }
