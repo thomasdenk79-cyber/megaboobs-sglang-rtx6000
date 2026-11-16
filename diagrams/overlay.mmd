@@ -1,0 +1,6 @@
+flowchart LR
+  N[NVIDIA FP4 Local] --> M[Tensor manifest]
+  T[ThinkingCap] --> M
+  M --> C{Exact shape/dtype/scale match?}
+  C -->|yes| H[Generated hybrid + SHA256 manifest]
+  C -->|no| B[Block overlay; keep NVIDIA baseline]
