@@ -1,5 +1,5 @@
-# Phase 00 – Quellen, Baselines und Blocker
+# Phase 00 – Sources, Baselines and Blockers
 
-Erfasse alle im Master-Auftrag genannten Repositories, Modelle, Issues, PRs, Branches, Tags und Commit-SHAs. Erstelle eine belastbare Evidenzmatrix und prüfe zuerst die Tensor-/Quantisierungskompatibilität von NVIDIA FP4-Local und ThinkingCap. Liefere danach die Entscheidung, ob der Hybrid technisch zulässig ist.
+Freeze the exact repositories, branches, tags, commits, model revisions, licenses and relevant file paths from `MASTER_REQUIREMENTS_EN.md`. Create the source/version manifests and the evidence report. Inspect checkpoint metadata without adding model weights to Git.
 
-Definition of Done: Quellenmanifest, Versionsmanifest, Evidenzmatrix, Blockerliste und reproduzierbare Prüfskripte liegen vor; keine Implementierung beginnt ohne diese Ergebnisse.
+Definition of done: every source has a URL, revision/SHA, role, relevant paths, evidence, confidence and open validation. JSON validates. No implementation phase may start before this gate is reviewed.
