@@ -1,10 +1,10 @@
 # Initialer Prompt für den OMO-Implementer
 
-Klone dieses Repository und arbeite den enthaltenen Auftrag vollständig ab:
+Klone dieses Repository:
 
 ```bash
 git clone https://github.com/thomasdenk79-cyber/megaboobs-sglang-rtx6000.git
 cd megaboobs-sglang-rtx6000
 ```
 
-Lies zuerst `AGENTS.md` und danach `tasks/MASTER-AUFTRAG-VARIANTE-B.md`. Setze die dort geforderten Recherche-, Architektur-, Implementierungs- und Testphasen in kleinen, überprüfbaren Schritten um. Beginne mit der Quellenprüfung und der Machbarkeitsentscheidung für NVIDIA FP4-Local plus selektives ThinkingCap-Overlay. Verändere keine produktiven Repositories oder Hardwarekonfigurationen, bevor die jeweilige Phase ihre Tests und Abnahmekriterien erfüllt. Dokumentiere jede Entscheidung, jeden Test, jede Unsicherheit und jeden Commit im Repository.
+Lies `00_START_HERE.md` und `AGENTS.md`. Das Repository enthält bereits die recherchierte Architektur, Patchreihenfolge, Blocker, Tests und Phasenprompts. Implementiere nichts frei aus dem Bauch heraus: beginne mit Phase 00, arbeite genau eine Phase pro Commit, halte die NVIDIA-FP4-Baseline startbar und stoppe bei jedem Tensor-, Scale-, State- oder Cache-Mismatch. Dokumentiere Tests, Messwerte, Unsicherheiten und Commit-SHA.
