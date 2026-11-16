@@ -1,0 +1,6 @@
+flowchart TD
+  OMO[OMO/OpenCode] --> API[OpenAI-compatible API]
+  API --> RT[Pennyroyal Runtime]
+  RT --> KV[FP8 or NVFP4 KVBackend]
+  RT --> HC[HiCache Coordinator]
+  HC --> SSD[NIXL POSIX/FILE NVMe]
